@@ -71,9 +71,10 @@ class Cleanser(Transformer,               # Base class
         inputCol = self.getInputCol()
         outputCol = self.getOutputCol()
 
+        single_quote_pattern = "â€™"
         punc_pattern = "[^\w\s]"
         space_pattern = "\s{2,}"
 
         return df.withColumn(outputCol,
-                             trim(regexp_replace(regexp_replace(inputCol, punc_pattern, ""),\
-                                                space_pattern, " ")))
+                             trim(regexp_replace(regexp_replace(regexp_replace(inputCol, single_quote_pattern, "\'"),\
+                                                                punc_pattern, ""), space_pattern, " ")))
