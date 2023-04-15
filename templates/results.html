@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lyrics Genre Classifier Results</title>
+    <style>
+        body {
+            background-color: #F2F2F2;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        img {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    <p><strong>Lyrics:</strong> {{ lyrics }}</p>
+    <p><strong>Prediction:</strong> {{ prediction }}</p>
+    <img src="data:image/png;base64,{{ chart_url }}" />
+</body>
+</html>
