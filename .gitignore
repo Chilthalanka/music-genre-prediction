@@ -3,6 +3,9 @@ cwij_env/
 data/
 .vscode/
 model/
+config/
+Merged_dataset.csv
+Student_dataset.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
