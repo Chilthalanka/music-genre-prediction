@@ -1,6 +1,7 @@
 # Import libraries
 import io
 import base64
+import os
 from flask import Flask, render_template, request
 from pyspark.sql import SparkSession
 from pyspark.ml.pipeline import PipelineModel
@@ -23,9 +24,10 @@ spark = SparkSession\
 
 
 # Load the data prep, string indexer and ML models
-data_prep_model = PipelineModel.load("./model/8-classes/data_prep/")
-lr_model = CrossValidatorModel.load("./model/8-classes/logistic_regression")
-rf_model = CrossValidatorModel.load("./model/8-classes/random_forest")
+model_base_path = "./model/8-classes/word2vec_only_v2/"
+data_prep_model = PipelineModel.load(os.path.join(model_base_path, "data_prep/"))
+lr_model = CrossValidatorModel.load(os.path.join(model_base_path, "logistic_regression/"))
+rf_model = CrossValidatorModel.load(os.path.join(model_base_path, "random_forest/"))
 
 # Label map
 labels = ["pop", "country", "blues", "rock", "jazz", "reggae", "hip hop", "retro"]
