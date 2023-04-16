@@ -1,0 +1,102 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.btn {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Header styles */
+.header {
+  background-color: #008CBA;
+  color: white;
+  padding: 20px;
+}
+
+/* Result container styles */
+.result-container {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Lyrics container styles */
+.lyrics-container {
+  width: 50%;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.lyrics-container h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.lyrics-container p {
+  font-size: 16px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.predicted-genre {
+  font-size: 24px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Chart container styles */
+.chart-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  margin: 20px;
+}
+
+.chart-container h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.chart {
+  width: 50%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}

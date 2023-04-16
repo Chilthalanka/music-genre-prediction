@@ -1,0 +1,73 @@
+/* Container */
+.container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Gif */
+.gif {
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+}
+
+/* Heading */
+h1 {
+    margin-top: 40px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Form */
+form {
+    margin-top: 30px;
+}
+
+/* Label */
+label {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    resize: none;
+    height: 100px;
+}
+
+/* Select */
+select {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+}
+
+/* Buttons */
+button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.predict-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.clear-button {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
