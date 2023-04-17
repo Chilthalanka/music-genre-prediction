@@ -24,15 +24,15 @@ spark = SparkSession\
 
 
 # Load the data prep, string indexer and ML models
-model_base_path = "./model/8-classes/word2vec_only_v2/"
+model_base_path = "./model/8-classes/word2vec_only_v3/"
 data_prep_model = PipelineModel.load(os.path.join(model_base_path, "data_prep/"))
 lr_model = CrossValidatorModel.load(os.path.join(model_base_path, "logistic_regression/"))
 rf_model = CrossValidatorModel.load(os.path.join(model_base_path, "random_forest/"))
 
 # Label map
-labels = ["pop", "country", "blues", "rock", "jazz", "reggae", "hip hop", "retro"]
+labels = ["pop", "country", "blues", "rock", "jazz", "reggae", "hip hop", "soul"]
 label_map = {0:"pop", 1:"country", 2:"blues", 3:"rock",
-             4:"jazz", 5:"reggae", 6:"hip hop", 7:"retro"}
+             4:"jazz", 5:"reggae", 6:"hip hop", 7:"soul"}
 
 
 @app.route('/')
