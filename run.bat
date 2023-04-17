@@ -15,6 +15,11 @@ echo Installing required packages...
 
 pip install -r requirements.txt
 
+:: Download NLTK data
+echo Downloading NLTK data...
+
+python -m nltk.downloader all
+
 :: Run the flask app
 echo Starting Flask app...
 
