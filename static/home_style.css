@@ -53,21 +53,21 @@ select {
 
 /* Buttons */
 button {
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 20px;
     border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.predict-button {
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #fff;
     background-color: #4CAF50;
-    color: white;
+    cursor: pointer;
+}
+  
+button:disabled {
+    opacity: 0.5;
+    cursor: default;
 }
 
-.clear-button {
+#clear-button {
     background-color: #f44336;
-    color: white;
-    margin-left: 10px;
 }

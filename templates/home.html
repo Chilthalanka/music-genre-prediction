@@ -9,7 +9,7 @@
     <div class="container">
         <img src="{{ url_for('static', filename='singing-musician.gif') }}" alt="Music Gif" class="gif">
         <h1>Music Genre Predictor</h1>
-        <form method="POST" action="/results">
+        <form method="POST" action="/predict" onsubmit='disableButton()'>
             <label for="lyrics">Enter Lyrics:</label><br>
             <textarea id="lyrics" name="lyrics" rows="10" cols="50" required></textarea><br><br>
             <label for="model">Select Model:</label>
@@ -17,19 +17,16 @@
                 <option value="random_forest">Random Forest</option>
                 <option value="logistic_regression">Logistic Regression</option>
             </select><br><br><br>
-            <button type="submit" class="predict-button">Predict</button>
-            <button type="button" class="clear-button" onclick="document.getElementById('lyrics').value='';">Clear</button>
+            <button type="submit" id="predict-button">Predict</button>
+            <button type="button" id="clear-button" onclick="document.getElementById('lyrics').value='';">Clear</button>
         </form>
     </div>
     <script>
-		// validate input on form submit
-		document.querySelector('form').addEventListener('submit', function(event) {
-			var lyricsInput = document.getElementById('lyrics');
-			if (lyricsInput.value.length === 0) {
-				alert('Lyrics should not be empty!');
-				event.preventDefault();
-			}
-		});
-	</script>
+        function disableButton() {
+            var btn = document.getElementById('predict-button');
+            btn.disabled = true;
+            btn.innerText = 'Predicting...'
+        }
+    </script>
 </body>
 </html>
