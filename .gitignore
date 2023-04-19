@@ -4,6 +4,8 @@ data/
 .vscode/
 model/
 config/
+logs/
+documents/
 Merged_dataset.csv
 Student_dataset.csv
 
