@@ -2,6 +2,8 @@
 import io
 import base64
 import os
+import webbrowser
+from threading import Timer
 from flask import Flask, render_template, request
 from pyspark.sql import SparkSession
 from pyspark.ml.pipeline import PipelineModel
@@ -18,8 +20,6 @@ app = Flask(__name__)
 spark = SparkSession\
     .builder\
     .appName("Music Genre Prediction")\
-    .config("spark.driver.memory", "4g")\
-    .config("spark.executor.memory", "4g")\
     .getOrCreate()
 
 
@@ -43,8 +43,8 @@ def home():
     return render_template("home.html")
 
 
-@app.route('/results', methods=['POST'])
-def results():
+@app.route('/predict', methods=['POST'])
+def predict():
     """
         Predict the genre of user input lyrics
     """
@@ -113,5 +113,10 @@ def plot_to_img(plot):
     return "data:image/png;base64,{}".format(img)
 
 
+def open_browser():
+    webbrowser.open_new("http://127.0.0.1:5000")
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    Timer(1, open_browser).start()
+    app.run(host="127.0.0.1", port=5000, debug=False)
