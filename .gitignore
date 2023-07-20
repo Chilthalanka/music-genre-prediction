@@ -2,6 +2,7 @@
 cwij_env/
 data/
 .vscode/
+.idea/
 model/
 config/
 logs/
